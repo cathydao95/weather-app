@@ -7,15 +7,11 @@ const Form = () => {
   const [data, setData] = useState();
 
   const getWeatherForLocation = async () => {
-    try {
-      const response = await fetch(
-        `http://localhost:3000/api/weather?city=${city}`
-      );
-      const weatherData = await response.json();
-      setData(weatherData.data);
-    } catch {
-      setData();
-    }
+    const response = await fetch(
+      `http://localhost:3000/api/weather?city=${city}`
+    );
+    const weatherData = await response.json();
+    setData(weatherData.data);
   };
 
   return (
