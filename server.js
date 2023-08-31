@@ -11,14 +11,14 @@ const PORT = 3000;
 
 app.get("/api/weather", (req, res) => {
   console.log(req.query);
-  const city = req.query.city;
-  const apiKey = process.env.API_KEY;
-  // const params = new URLSearchParams({
-  //   q: req.query.cityName,
-  //   appid: process.env.API_KEY,
-  //   units: "imperial",
-  // });
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+
+  const params = new URLSearchParams({
+    q: req.query.city,
+    appid: process.env.API_KEY,
+    units: "imperial",
+  });
+  const url = `https://api.openweathermap.org/data/2.5/weather?${params}`;
+
   console.log(url);
   fetch(url)
     .then((res) => res.json())
