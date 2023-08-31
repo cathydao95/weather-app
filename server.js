@@ -10,8 +10,6 @@ app.use(express.json());
 const PORT = 3000;
 
 app.get("/api/weather", (req, res) => {
-  console.log(req.query);
-
   const params = new URLSearchParams({
     q: req.query.city,
     appid: process.env.API_KEY,
