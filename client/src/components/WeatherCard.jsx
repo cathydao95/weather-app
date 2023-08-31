@@ -24,6 +24,10 @@ const WeatherCard = ({ data, city }) => {
         </p>
       </div>
     );
+  } else {
+    return (
+      <div className="noCity">No city found. Please enter a valid city</div>
+    );
   }
 };
 
