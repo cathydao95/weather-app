@@ -18,8 +18,6 @@ const Form = () => {
     }
   };
 
-  console.log(data);
-
   return (
     <>
       <div className="form">
