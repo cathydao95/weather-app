@@ -2,7 +2,6 @@ import React from "react";
 import "./WeatherCard.css";
 
 const WeatherCard = ({ data, city }) => {
-  console.log("data", data);
   return (
     <div>
       {data && data.name && (
