@@ -12,6 +12,9 @@ const WeatherCard = ({ data, city }) => {
           <span className="infoHeading">Description:</span>{" "}
           {data.weather[0].description}
         </p>
+        <img
+          src={`https://openweathermap.org/img/w/${data.weather[0].icon}.png`}
+        />
         <p className="temperature info">
           <span className="infoHeading">Temperature:</span> {data.main.temp}
         </p>
